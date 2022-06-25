@@ -1,3 +1,5 @@
+CSS 1
+
 @font-face {
 
     font-family: "Fira Sans";
@@ -200,4 +202,47 @@ footer {
         order: 4;
 
     }
+}
+--------------------------------------------------------------------------------
+
+CSS 2
+
+
+.red_backround{
+    font-weight: bold;
+    background-color:darkred;
+}
+body{
+    background-color:whitesmoke;
+} 
+#anId{
+    color: rgb(226, 208, 43);
+    font-family:fantasy;
+}
+footer{
+    background-color: greenyellow;
+}
+ul{
+    position:fixed;
+    justify-content: flex-end;
+    background-color: aliceblue;
+}
+
+li:hover > ul { /* Show submenu */
+    display: block;
+    flex-direction:column;
+}
+li>ul{ /* τα ul που ειναι παιδια των li */
+    display: none;
+    position: absolute;
+}
+.left{
+    position: fixed;
+    right:10%;
+    top:5%;
+}
+.right{
+    position: fixed;
+    right:2%;
+    top:5%;
 }
