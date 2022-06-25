@@ -1,3 +1,5 @@
+PHP TO DATABASE
+
 <?php
 
     $servername = "localhost";
