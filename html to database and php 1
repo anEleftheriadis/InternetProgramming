@@ -1,5 +1,5 @@
 HTML TO DATABASE
-
+page3.html
 
 <!DOCTYPE html>
 
@@ -48,6 +48,8 @@ HTML TO DATABASE
 
 php
 --------------------------------------------------------------------
+database.php
+
 ?php
 	$servername = "localhost";
 	$username = "root";
