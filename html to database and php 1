@@ -9,9 +9,9 @@ page3.html
 
     <form action="database.php" method="post">
 
-        <label for="fname">Name</label><br>
+        <label for="name">Name</label><br>
 
-        <input type="text" id="fname" name="name"><br>
+        <input type="text" id="name" name="name"><br>
 
         <label for="email">Email</label><br>
 
@@ -25,7 +25,7 @@ page3.html
 
     <button id="clear-button" onclick="{
 
-        document.querySelector('#fname').value = '';
+        document.querySelector('#name').value = '';
 
         document.querySelector('#email').value = '';
 
