@@ -1,0 +1,124 @@
+<?php
+
+
+class TableRows extends RecursiveIteratorIterator {
+    function __construct($it) {
+    parent::__construct($it, self::LEAVES_ONLY);
+    }
+    function current() {
+    return "<td style='width:150px;border:1px solid black;'>" . parent::current().
+    "</td>";
+    }
+    function beginChildren() {
+    echo "<tr>";
+    }
+    function endChildren() {
+    echo "</tr>" . "\n";
+    }
+    }
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "myDB2";
+    $tabname = "Persons";
+
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+
+
+	echo "Δώσατε: <br><br>";
+	echo $name . "<br>";
+	echo $email . "<br>";
+	echo "<br>";
+
+
+// Create connection
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=test", $username,
+    $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn->exec("CREATE DATABASE IF NOT EXISTS $dbname");
+    // use exec() because no results are returned
+    echo "Database created successfully<br>";
+    }
+    catch(PDOException $e)
+    {
+    echo $sql . "<br>" . $e->getMessage();
+    }
+    $conn = null;
+
+
+    
+ try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username,
+    $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+//create table
+
+    $sql = "CREATE TABLE IF NOT EXISTS $tabname (
+        id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        p_name VARCHAR(60) NOT NULL,
+        email VARCHAR(50)
+        )";
+
+    $conn->exec($sql);
+    echo "Table created successfully<br>";
+    }  
+    catch(PDOException $e)
+    {
+    echo "Connection failed: " . $e->getMessage();
+    }
+    $conn = null;
+
+    try {
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username,
+        $password);
+        // set the PDO error mode to exception
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $stmt = $conn->prepare("INSERT INTO $tabname (p_name, email)
+        VALUES (:p_name, :email)");
+        $stmt->bindParam(':p_name', $name);
+        $stmt->bindParam(':email', $email);
+        $stmt->execute();
+
+        echo "New record created successfully";
+        // use exec() because no results are returned
+        $conn->exec($sql);
+        }
+        catch(PDOException $e)
+        {
+        echo $sql . "<br>" . $e->getMessage();
+        }
+
+
+
+        try {
+            $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username,
+            $password);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            
+            echo "<table style='border: solid 1px black;'>";
+            echo "<tr><th>Id</th><th>Name</th><th>email</th></tr>";
+            
+            $stmt = $conn->prepare("SELECT id, p_name, email FROM Persons");
+            $stmt->execute();
+            // set the resulting array to associative
+            $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+                    echo $v;
+}
+            }
+            catch(PDOException $e)
+            {
+            echo $sql . "<br>" . $e->getMessage();
+            }
+            
+            $conn = null;
+            echo "</table>";
+
+?>
