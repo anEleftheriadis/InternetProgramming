@@ -1,0 +1,286 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<!--        <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+        <title>Elements Showcase</title>
+        <link rel="stylesheet" href="main.css">
+        <style>
+            body {
+                background-color: rgb(236, 231, 255);
+                color: rgb(72, 72, 72);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="assets/HTML5_Logo.svg" alt="HTML5 Logo" title="HTML5 Logo" width="50"> Αφοσιωμένοι στην HTML...
+            <nav>
+                <a href="#">Σελίδα #1</a>
+                <a href="#">Σελίδα #2</a>
+                <a href="#">Σελίδα #3</a>
+                <a href="tel:2310891857">Τηλέφωνο</a>
+            </nav>
+        </header>
+
+        <main>
+            <article>
+                <h1>Χρήση των HTML5 Sectioning Elements</h1>
+                <section>
+                    <h1>Το Element <em>main</em></h1>
+                    <p>Περιέχει το κύριο τμήμα του εγγράφου ή της εφαρμογής.</p>
+                    <h2>Ιδιαιτερότητες</h2>
+                    <p>Μπορεί να είναι <strong>μόνον</strong> ένα</p>
+                </section>
+                <section>
+                    <h1>Το Element <em>article</em></h1>
+                    <p>Αποτελεί τμήμα του εγγράφου ή της εφαρμογής που θα μπορούσε να αποσπαστεί από το περιβάλλον του</p>
+                </section>
+                <aside>
+                    <p>Συστήνεται η χρήση του &lt;h1&gt; στα sectioning elements.</p>
+                    <p>Ανάλογα με την εμφώλευσή του καταλήγει ισάξιο με το &lt;h2&gt;, το &lt;h3&gt; κ.λπ.</p>
+                </aside>
+            </article>
+        </main>
+
+        <h1>Header 1</h1>
+        <h2>Header 2</h2>
+        <h3>Header 3</h3>
+        <h4>Header 4</h4>
+        <h5>Header 5</h5>
+        <h6>Header 6</h6>
+
+        <div id="sameBorder">
+            <ol>
+                <li>Item</li>
+                <li>Item</li>
+            </ol>
+            <ul>
+                <li>Item #1
+                    <ol>
+                        <li>Nested item</li>
+                        <li>Nested item</li>
+                    </ol>
+                </li>
+                <li>Item #2</li>
+            </ul>
+        </div>
+
+        <p>Lorem ipsum dolor sit amet, in eum hinc doming noster. Et postea tacimates mel, ius quodsi aperiri mnesarchum in. Vix purto omittam constituam no, tale habemus civibus ne mei. Et oporteat imperdiet mei. Solum tamquam nominati vim te. Quo ignota verear regione et, habeo ornatus conclusionemque id eos.
+
+Te probo laudem suscipit est, ius patrioque democritum id, vis velit falli no. Ea nec mutat suscipiantur, vix eu magna paulo volumus. Dicat apeirian ad has. Ei eos mucius discere omittantur, et putant consequat voluptatibus sit.
+<br>
+Te petentium definiebas comprehensam est, mea error urbanitas democritum id. Eos oratio dicant equidem ut, pro adhuc facete propriae in. Ei per volumus minimum signiferumque. Nam te meliore nominavi similique, tantas option maiorum mei eu. Altera pericula conclusionemque an vim. Ullamcorper intellegebat ad mei.</p>
+
+        <pre>
+            U     U     M     M 
+            U     U     MM MM 
+            U     U ooo M M M 
+            U     U o o M     M 
+             UUU    ooo M     M
+        </pre>
+
+        <dl>
+            <dt>Term with no description</dt>
+            <dt>Term with two descriptions</dt>
+                <dd>Description #1</dd>
+                <dd>Description #2</dd>
+        </dl>
+        <hr>
+        <figure>
+            <img src="assets/HTML5_Logo.svg" alt="HTML5 Logo" title="HTML5 Logo" width="50">
+            <figcaption>HTML5 Logo</figcaption>
+        </figure>
+
+        <p>Άθροισμα: Χ<sup>2</sup> + Α<sub>2</sub></p>
+
+        <audio src="assets/smiths.ogg" controls></audio><br>
+        <video controls>
+            <source src="assets/simple.webm" type="video/webm">
+            <source src="assets/simple.mp4"    type="video/mp4">
+            Δυστυχώς, δεν εκτελείται <code>video</code> στον browser σας.
+        </video>
+
+        <table>
+            <caption>Ένας μικρός πίνακας</caption>
+            <thead></thead>
+            <tbody>
+                <tr>
+                    <th>Έτος</th>
+                    <th colspan="2">Ονοματεπώνυμο</th>
+                    <th>Βαθμολογία</th>
+                </tr>
+                <tr>
+                    <td rowspan="3">1o</td>
+                    <td>Αγγέλου</td>
+                    <td>Βασιλική</td>
+                    <td>7.0</td>
+                </tr>
+                <tr>
+                    <td>Γεωργίου</td>
+                    <td>Βασίλειος</td>
+                    <td>8.5</td>
+                </tr>
+                <tr>
+                    <td>Παρασκευά</td>
+                    <td>Μαρία</td>
+                    <td>5.0</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">2o</td>
+                    <td>Παπαδόπουλος</td>
+                    <td>Ανέστης</td>
+                    <td>9.2</td>
+                </tr>
+                <tr>
+                    <td>Καλούση</td>
+                    <td>Όλγα</td>
+                    <td>7.5</td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+
+        <hr>
+        <table class="myData">
+            <caption>Ένας πλήρης πίνακας</caption>
+            <colgroup>
+                <col>
+                <col span="2" style="background-color: rgb(117, 196, 8);">
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Α/Α</th>
+                    <th>Άνθρωποι</th>
+                    <th>Μήνες</th>
+                    <th>Κόστος</th>
+                    <th>Φ.Π.Α.</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>σε &euro;</td>
+                    <td>23%</td>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>Σύνολο:</th>
+                    <th>18</th>
+                    <th>29</th>
+                    <th>8500</th>
+                    <th>1955</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>6</td>
+                    <td>1000</td>
+                    <td>230</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>2000</td>
+                    <td>460</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>2</td>
+                    <td>1000</td>
+                    <td>230</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>6</td>
+                    <td>1500</td>
+                    <td>345</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>1000</td>
+                    <td>230</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>4</td>
+                    <td>8</td>
+                    <td>2000</td>
+                    <td>460</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form method="get">
+            <fieldset>
+                <legend>23 inputs!</legend>
+                <datalist id="myList">
+                    <option value="Θεσσαλονίκη">
+                    <option value="Αθήνα">
+                    <option value="Πάτρα">
+                </datalist>
+                <label>Text: <input name="n01" list="myList" type="text"></label><br>
+                <label>Password: <input name="n02" type="password"></label><br>
+                <label><input name="n03" type="checkbox" value="checked"> Checkbox</label><br>
+                <label><input name="n04" type="radio" value="m" checked> Male</label>
+                <label><input name="n04" type="radio" value="f"> Female</label><br>
+                <input name="n05" type="button" value="Input"><br>
+                <input name="n06" type="submit" value="Υποβολή"><br>
+                <input name="n07" type="reset" value="Επαναφορά"><br>
+                Επιλογή αρχείου: <input name="n08" type="file"><br>
+                <input name="n09" type="hidden" value="Κρυφό">
+                <input name="n10" type="image" src="assets/sign_up.svg" alt="Sign Up" width="80px"><br>
+                Number: <input name="n11" type="number" min="10" max="50" step="10"><br>
+                Range: <input name="n12" type="range" min="0" max="8" step="2"><br>
+                E-mail: <input name="n13" type="email"><br>
+                URL: <input name="n14" type="url"><br>
+                Search: <input name="n15" type="search"><br>
+                Telephone: <input name="n16" type="tel"><br>
+                Color: <input name="n17" type="color" value="#ff0000"><br>
+                Date: <input name="n18" type="date"><br>
+                Month: <input name="n19" type="month"><br>
+                Week: <input name="n20" type="week"><br>
+                Time: <input name="n21" type="time"><br>
+                Datetime: <input name="n22" type="datetime"><br>
+                Datetime-local: <input name="n23" type="datetime-local">
+            </fieldset>
+            <button type="button">Button</button>
+            <select name="pizza">
+                <optgroup label="Εντός προσφοράς">
+                    <option value="small">Ατομική</option>
+                    <option value="medium">Οικογενειακή</option>
+                </optgroup>
+                <optgroup label="Εκτός προσφοράς">
+                    <option value="big" selected>Μεγάλη</option>
+                    <option value="giant">Γίγας</option>
+                </optgroup>
+            </select><br>
+            <textarea name="comments" placeholder="Σχόλια..."></textarea><br>
+            <progress value="70" max="100">70%</progress>
+            <meter max="100" low="15" high="80" value="75" optimum="10">75GB / 100GB</meter>
+        </form>
+
+        <footer>
+            &copy; Copyright MSc Applied Informatics 2014-2024
+            <address>
+                E-mail: kaskalis (at) gmail.com
+            </address>
+        </footer>
+
+        <script>
+            window.addEventListener("click", function () {
+                console.log("Click στο παράθυρο!");
+            }, false);
+        </script>
+    </body>
+</html>
