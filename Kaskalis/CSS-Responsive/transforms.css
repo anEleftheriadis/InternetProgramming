@@ -1,0 +1,30 @@
+div {
+    width: 250px;
+}
+
+p {
+    border: 2px solid rgb(172, 172, 172);
+    background-color: rgb(130, 253, 149);
+    width: 200px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.translate {
+    transform: translate(50px, -20px);
+}
+
+.rotate {
+    transform-origin: top left;
+    transform: rotate(-15deg);
+}
+
+.scale {
+    transform-origin: top left;
+    transform: scale(1.5, 0.8);
+}
+
+.skew {
+    transform: skew(10deg, 5deg);
+    transform-origin: top left;
+}

@@ -1,0 +1,86 @@
+/* Typical properties start */
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("https://fonts.gstatic.com/s/sourcesanspro/v13/6xK3dSBYKcSV-LCoeQqfX1RYOo3qO67lqDY.woff2");
+}
+  
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 22px;
+    margin-top: 0;
+}
+
+header, nav, main, article, aside, footer {
+    padding: 10px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    text-align: center;
+}
+/* Typical properties end */
+
+/* Flex in grid */
+nav {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+a { flex: 1; }
+
+/* Colorize and assign grid names */
+header  { background-color: yellow;         grid-area: head; }
+nav     { background-color: yellowgreen;    grid-area: navi; }
+main    { background-color: orange;         grid-area: main; text-align: left; }
+article { background-color: skyblue;        grid-area: news; }
+aside   { background-color: violet;         grid-area: info; }
+footer  { background-color: lightgray;      grid-area: foot; }
+
+/* Grid container - small screens */
+body {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "head"
+        "navi"
+        "main"
+        "news"
+        "info"
+        "foot";
+}
+
+/* Medium screens */
+@media all and (min-width: 600px) {
+    body {
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+            "head head"
+            "navi navi"
+            "news main"
+            "info foot";
+    }
+}
+
+/* Large screens */
+@media all and (min-width: 800px) {
+    nav {
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    a { flex: 0; }
+    
+    body {
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-areas:
+            "head head head"
+            "navi main news"
+            "navi main info"
+            "foot foot foot";
+    }
+}

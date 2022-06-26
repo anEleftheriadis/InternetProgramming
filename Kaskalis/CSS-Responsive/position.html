@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Display Property Showcase</title>
+        <style>
+            ul {
+                position: fixed; /* Fixed in upper right */
+                top: 0;
+                right: 0;
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                background: deepskyblue;
+                font-family: sans-serif;
+            }
+            li {
+                position: relative; /* Prepare for sub-menu */
+                display: inline-block;
+                cursor: pointer;
+                padding: 10px;
+            }
+            li:hover {
+                background: white;
+            }
+            li > ul {
+                display: none; /* Hide submenu */
+                position: absolute; /* Submenu beneath menu item */
+                top: 100%;
+                left: 0;
+            }
+            li:hover > ul { /* Show submenu */
+                display: block;
+            }
+            li li {
+                display: block;
+            }
+            div {
+                height: 600px;
+                border: 1px solid black;
+                background-color: bisque;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>Αρχική</li>
+            <li>Πληροφορίες
+                <ul>
+                    <li>Προσωπικό</li>
+                    <li>Γραμματεία</li>
+                    <li>Ιστορικό</li>
+                </ul>
+            </li>
+            <li>Προϊόντα</li>
+            <li>Επικοινωνία</li>
+        </ul>
+        <div></div>
+    </body>
+</html>
