@@ -74,6 +74,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 ?>
 
 <!DOCTYPE html>>
+<html>
 <head>
     <meta charset="UTF-8">
     <title>ics22135</title>
