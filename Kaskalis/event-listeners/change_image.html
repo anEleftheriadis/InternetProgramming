@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Τροποποίηση εικόνων</title>
+	</head>
+	<body>
+		<p>Εικόνες ζώων:
+			<a id="penguin" href="#">πιγκουίνος</a>,
+			<a id="cow" href="#">αγελάδα</a>,
+			<a id="elephant" href="#">ελέφαντας</a>.</p>
+		<p style="text-align: center;"><img src="penguin.png" /></p>
+		<script>
+			var i;
+
+			for (i = 0; i < document.links.length; i++) {
+				document.links[i].addEventListener('click', function (ev) {
+					document.images[0].setAttribute('src', this.id+'.png'); // παίρνω το id (όνομα αρχείου) από το src με κατάληξη png 
+				});
+			}
+		</script>
+	</body>
+</html>
