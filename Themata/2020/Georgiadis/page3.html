@@ -1,3 +1,6 @@
+HTML MYSQLI
+
+
 <!DOCTYPE html>
 
 <html>
@@ -32,4 +35,25 @@
 
 </body>
 
+</html>
+
+-------------------------------------------
+HTML PDO
+<html>
+    <body>
+
+        <form action="createDBT1.php" method="post">
+             Name  : <input type="text" id="name" name="name"><br>
+             E-mail: <input type="text" id="email" name="email"><br>
+             <button id="submit-button"> Submit to DB </button>
+        </form>
+
+
+        <button id="clear-button" onclick="{
+            document.querySelector('#name').value = '';
+            document.querySelector('#email').value = '';
+            }"> Clear 
+        </button>
+        
+    </body>
 </html>
