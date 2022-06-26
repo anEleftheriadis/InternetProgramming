@@ -1,0 +1,85 @@
+HTML 2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My website</title>
+ <!--  <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+  <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <link rel="stylesheet" href="thema_2020.css"> 
+</head>
+<header class="red_backround">
+    <h1 >Doctor's page</h1> 
+    <ul>
+        <li class="left"><a href="https://el.wikipedia.org/wiki/%CE%99%CE%B1%CF%84%CF%81%CF%8C%CF%82"> Πληροφορίες</a></li>
+        <li class="right">Ραντεβού
+            <ul>
+                <li>Τηλέφωνο</li>
+                <li>Τοποθεσία</li>
+            </ul>
+        </li>
+    </ul>
+</header>
+<body>
+    <main>
+        <img src="photo1.JPG" alt="workshop photo">
+      <h2 id="anId">Παρεχόμενες υπηρεσίες</h2>
+      <p>jifsiuogry8w9ghvushigwrhguo</p>
+    </main>
+    <aside>
+        <form action="" method="post">
+            <label for="username">Ονομα:</label>
+            <input type="text" name="username">
+            <label for="password">Κωδικός:</label>
+            <input type="psw" name="password">
+            <input type="submit" name="ypobolh">
+        </form>
+    </aside>
+
+</body>
+<footer>Για ραντεβού καλέστε στο: <strong>2310222222</strong></footer>
+</html>
+--------------------------------------------------------------------------------
+
+CSS 2
+
+
+.red_backround{
+    font-weight: bold;
+    background-color:darkred;
+}
+body{
+    background-color:whitesmoke;
+} 
+#anId{
+    color: rgb(226, 208, 43);
+    font-family:fantasy;
+}
+footer{
+    background-color: greenyellow;
+}
+ul{
+    position:fixed;
+    justify-content: flex-end;
+    background-color: aliceblue;
+}
+
+li:hover > ul { /* Show submenu */
+    display: block;
+    flex-direction:column;
+}
+li>ul{ /* τα ul που ειναι παιδια των li */
+    display: none;
+    position: absolute;
+}
+.left{
+    position: fixed;
+    right:10%;
+    top:5%;
+}
+.right{
+    position: fixed;
+    right:2%;
+    top:5%;
+}
