@@ -3,78 +3,50 @@ PHP TO DATABASE
 <?php
 
     $servername = "localhost";
-
     $username = "root";
-
     $password = "";
-
     $dbname = "myDB2";
-
     $tabname = "Persons";
 
-
     $name = $_POST['name'];
-
     $email = $_POST['email'];
 
 
 
     echo "Your input: <br><br>";
-
     echo $name . "<br>";
-
     echo $email . "<br>";
-
     echo "<br>";
 
 
     // Create connection
-
     $conn = mysqli_connect($servername, $username, $password);
-
-
-
+    
     // Check connection
-
     if (!$conn) {
-
         die("Connection failed: " . mysqli_connect_error());
-
     }
 
-
     // Create database
-
     $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
-
-
 
     if (mysqli_query($conn, $sql)) {
 
         echo "Database created successfully <br>";
 
     } else {
-
         echo "Error creating database: " . mysqli_error($conn) . "<br>";
-
     }
-
 
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 
-    
-
     // sql to create table
 
     $sql = "CREATE TABLE IF NOT EXISTS $tabname (
-
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-
     P_name VARCHAR(30) NOT NULL,
-
     email VARCHAR(50)
-
     )";
 
 
@@ -88,13 +60,9 @@ PHP TO DATABASE
 
     } 
 
-
-
     $sql = "INSERT INTO $tabname (P_name, email)
 
     VALUES ('$name', '$email')";
-
-
 
     if (mysqli_query($conn, $sql)) {
 
@@ -114,9 +82,6 @@ PHP TO DATABASE
 
     $result = mysqli_query($conn, $sql);
 
-    
-
-    
 
     if (mysqli_num_rows($result) > 0) {
 
@@ -127,16 +92,10 @@ PHP TO DATABASE
             echo "id: " . $row["id"]. " - Name: " . $row["P_name"]. " " . $row["email"].
 
             "<br>";
-
         }
-
     } else {
-
         echo "0 results";
-
     } 
-
-
     mysqli_close($conn);
 
 ?> 
