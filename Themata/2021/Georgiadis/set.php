@@ -2,7 +2,7 @@
 		$servername = "localhost";
 		$username = "root";
 		$password = "";
-        $dbname = 'dai17098';
+     		$dbname = 'ics22135';
 
 		// Create connection
 		$link = new mysqli($servername, $username, $password, $dbname);
@@ -45,7 +45,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($names_err) && empty($website_err)){
         
         // Prepare an insert statement
-        $sql = "INSERT INTO dai17098 (id, names, website) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO ics22135 (id, names, website) VALUES (?, ?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -76,7 +76,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <!DOCTYPE html>>
 <head>
     <meta charset="UTF-8">
-    <title>dai17098</title>
+    <title>ics22135</title>
     <style>
         body{ font: 16px sans-serif; }
         .form{
